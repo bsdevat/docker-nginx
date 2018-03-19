@@ -1,5 +1,7 @@
 # BSDev.at nginx docker image
 
+[![Build Status](https://travis-ci.org/bsdevat/docker-nginx.svg?branch=master)](https://travis-ci.org/bsdevat/docker-nginx)
+
 This docker image will be used for serving PHP and other projects.
 It's based on the idea of micro containers.
 
