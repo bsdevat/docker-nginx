@@ -64,6 +64,17 @@ docker exec -it nginx-instance sh
 
 **TODO:** how to mount/link the docker web root to an external directory
 
+```
+docker run -d \
+    -p <your-http-port>:8080 \
+    -p <your-https-port>:8443 \
+    -v /path/to/host/html:/usr/share/nginx/html:ro
+    --name nginx-instance \
+    bsdevat/nginx
+```
+With the *-v* option you can set the mount point of the html files and override
+the docker image folder content.
+
 ### Serving PHP
 
 **TODO:** how to link to a php fpm and a optimized config
