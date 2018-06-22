@@ -3,12 +3,13 @@
 [![Build Status](https://travis-ci.org/bsdevat/docker-nginx.svg?branch=master)](https://travis-ci.org/bsdevat/docker-nginx)
 
 This docker image will be used for serving PHP and other projects.
-It's based on the idea of micro containers.
+It's based on the idea of micro containers and should be able to run without
+root privilege. This is a requirement to run on the Oracle OpenShift platform.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your
-local machine for development and testing purposes.
+These instructions will help you getting a copy of the project up and running on
+your local machine for development and testing purposes.
 
 ### Installing
 
@@ -67,6 +68,14 @@ docker exec -it nginx-instance sh
 
 **TODO:** how to link to a php fpm and a optimized config
 
+## Secure your web server
+
+If you run a public accessible nginx, consider some changes to harden your
+configuration.
+
+1. [nixCraft: Top 25 Nginx Web Server Best Security Practices](https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html)
+
+
 ## Build from Sources
 
 ```
@@ -76,7 +85,7 @@ docker run -p 8080:8080 nginx-dev
 
 Now you can open http://host-ip:8080. You can start the image with options
 described in the section about [running nginx](#running-the-image) but with
-your given name when you built it. Here it's *nginx-dev*.
+your given name when you built it. In this case it's *nginx-dev*.
 
 ## References
 
