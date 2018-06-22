@@ -10,6 +10,7 @@ COPY conf/default.conf /etc/nginx/conf.d/default.conf
 
 # default webroot /usr/share/nginx/html
 COPY htdocs/index.html /usr/share/nginx/html/index.html
+VOLUME /usr/share/nginx/html
 
 # nginx will serve HTTP and HTTPS on high ports
 EXPOSE 8080
